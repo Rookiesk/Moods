@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Moods</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
+    <style type="text/css">
+        [v-cloak] { display: none;}
+        [v-cloak] .v-cloak--block {
+            display: block!important;
+        }
+
+        [v-cloak] .v-cloak--inline {
+            display: inline!important;
+        }
+
+        [v-cloak] .v-cloak--inlineBlock {
+            display: inline-block!important;
+        }
+
+        [v-cloak] .v-cloak--hidden {
+            display: none!important;
+        }
+
+        [v-cloak] .v-cloak--invisible {
+            visibility: hidden!important;
+        }
+
+        .v-cloak--block,
+        .v-cloak--inline,
+        .v-cloak--inlineBlock {
+            display: none!important;
+        }
+    </style>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+<div class="mdl-layout mdl-js-layout">
+    <header class="mdl-layout__header mdl-layout__header--scroll">
+        <div class="mdl-layout__header-row">
+            <!-- Title -->
+            <span class="mdl-layout-title">Moods</span>
+            <!-- Add spacer, to align navigation to the right -->
+            <div class="mdl-layout-spacer"></div>
+            <!-- Navigation -->
+            <nav id="navigation-bar" class="mdl-navigation">
+                <a class="mdl-navigation__link" href="/login">Facebook Login</a>
+                <a class="mdl-navigation__link" href="#" v-on:click="logout">Logout</a>
+                <a class="mdl-navigation__link" href="">Link</a>
+                <a class="mdl-navigation__link" href="">Link</a>
+            </nav>
+        </div>
+    </header>
+    <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Moods</span>
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="/login">Facebook Login</a>
+            <a class="mdl-navigation__link" href="">Link</a>
+            <a class="mdl-navigation__link" href="">Link</a>
+            <a class="mdl-navigation__link" href="">Link</a>
+        </nav>
+    </div>
+    <main class="mdl-layout__content">
+        <div class="page-content">
+            <div id="user" v-cloak>{{user.name}}</div>
+        </div>
+    </main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
